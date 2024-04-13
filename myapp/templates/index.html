@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>captcha project</title>
+    <link rel="stylesheet" href="{% static 'mystyle.css' %}">
+</head>
+<body>
+    <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="employeeform">
+        <h1>Employee Project</h1>
+        <div>
+            <form action="" method="POST" novalidate>
+                {% csrf_token %}
+                {% for fm in form %}   
+                    <table>
+                        <label>{{fm.label}}</label>
+                        <span>{{fm}}</span> <span class="errorlist">{{fm.errors|striptags}}</span> <br> <br>
+                    </table>
+                {% endfor %}
+                <input type="submit" value="Submit" class="submit">
+        </div>   
+    </div>
+
+
+    <!-- <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {{form.non_field_errors}}
+            {% for field in form %}
+                {{field.label_tag}}  {{field}} {{field.errors}} <br> <br>
+            {% endfor %}
+        <input type="submit" value="Submit">
+        
+    </form> -->
+</body>
+</html>

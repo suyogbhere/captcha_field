@@ -1,0 +1,51 @@
+h1 {
+ text-align: center;
+}
+
+label{
+    font-weight:bold ;
+    margin-right: 10px;
+}
+
+.employeeform{
+    border: 2px solid black;
+    width: 400px;
+    height:320px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 90px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.submit{
+    background-color: rgb(54, 82, 223);
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+    border-radius: 5px;
+    
+}
+
+.text-danger{
+    color: red;
+}
+
+.errorlist{
+    list-style-type: none;
+    color: red;
+    font-size: 10px;
+    /* margin-left: 50px; */
+    padding: 0;
+}
+
+.success{
+    color: green;
+    font-weight: bold;
+}
+
+#id_name,#id_email,#id_captcha_1,#id_captcha_0{
+    padding: 10px;
+    border-radius: 10px;
+}
